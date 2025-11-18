@@ -1,0 +1,91 @@
+name: DataUsageAgreement
+from_schema: https://w3id.org/gaia-x/development#data-exchange-wg
+slot_usage:
+  producedBy:
+    name: producedBy
+    description: A resolvable link to the Data Producer.
+    range: DataProducer
+    required: true
+  providedBy:
+    name: providedBy
+    description: A resolvable link to the Data Provider.
+    range: DataProvider
+    required: true
+  dataUsageAgreementTrustAnchor:
+    name: dataUsageAgreementTrustAnchor
+    required: true
+  signers:
+    name: signers
+    required: true
+attributes:
+  producedBy:
+    name: producedBy
+    description: A resolvable link to the Data Producer.
+    title: produced by
+    from_schema: https://w3id.org/gaia-x/development#slots
+    alias: producedBy
+    owner: DataUsageAgreement
+    domain_of:
+    - DataUsageAgreement
+    - DataResource
+    range: DataProducer
+    required: true
+  providedBy:
+    name: providedBy
+    description: A resolvable link to the Data Provider.
+    from_schema: https://w3id.org/gaia-x/development#slots
+    alias: providedBy
+    owner: DataUsageAgreement
+    domain_of:
+    - ServiceOffering
+    - DataProduct
+    - DataProductUsageContract
+    - DataUsageAgreement
+    range: DataProvider
+    required: true
+  licensedBy:
+    name: licensedBy
+    description: A resolvable links to Data Licensors.
+    from_schema: https://w3id.org/gaia-x/development#slots
+    slot_uri: gx:licensedBy
+    alias: licensedBy
+    owner: DataUsageAgreement
+    domain_of:
+    - DataUsageAgreement
+    range: string
+    multivalued: true
+  dataUsageAgreementTrustAnchor:
+    name: dataUsageAgreementTrustAnchor
+    description: A resolvable link to the Data Usage Agreement Trust Anchor.
+    from_schema: https://w3id.org/gaia-x/development#slots
+    slot_uri: gx:dataUsageAgreementTrustAnchor
+    alias: dataUsageAgreementTrustAnchor
+    owner: DataUsageAgreement
+    domain_of:
+    - DataUsageAgreement
+    range: string
+    required: true
+  dataProduct:
+    name: dataProduct
+    description: A resolvable link to the Data Product Description Declaration (after negotiation ).
+    from_schema: https://w3id.org/gaia-x/development#slots
+    alias: dataProduct
+    owner: DataUsageAgreement
+    domain_of:
+    - DataProductUsageContract
+    - DataUsageAgreement
+    range: DataProduct
+    required: true
+  signers:
+    name: signers
+    description: The array identifying all required Participant signature.
+    from_schema: https://w3id.org/gaia-x/development#slots
+    alias: signers
+    owner: DataUsageAgreement
+    domain_of:
+    - DataProductUsageContract
+    - DataUsageAgreement
+    range: SignatureCheckType
+    required: true
+    multivalued: true
+class_uri: gx:DataUsageAgreement
