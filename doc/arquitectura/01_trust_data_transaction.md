@@ -1,4 +1,4 @@
-# GAIA-X Implementation of Trusted Data Transactions
+# GAIA-X Implementacion Trusted Data Transactions
 
 ## Introducción
 
