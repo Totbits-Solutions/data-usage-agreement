@@ -8,7 +8,7 @@ Es decir:
 
 GAIA-X adopta el modelo de **Verifiable Credentials (VC)** basado en “Issuer / Holder / Verifier”, y dentro de ese modelo, el **Issuer** es el **Trust Anchor**.
 
-# ¿Cuál es su rol dentro de GAIA-X?
+## ¿Cuál es su rol dentro de GAIA-X?
 
 Un **Trust Anchor** sirve para:
 
@@ -28,12 +28,12 @@ ej. número de registro mercantil, VAT ID, EORI, LEI, etc.
 
 Toda clave que firma Self-Descriptions debe tener en su **cadena de certificados** al menos un Trust Anchor reconocido.
 
-# Referencia exacta GAIA-X
+## Referencia exacta GAIA-X
 
 > “Trust Anchors are entities endorsed by Gaia-X. Trust Anchors shall underpin claims by Participants… They will affirm the necessary trust in otherwise mere self-declared statements.”
 > **(GAIA-X Trust Framework, sección Trust Anchors)**
 
-# ¿Qué comprueba GAIA-X respecto a los Trust Anchors?
+## ¿Qué comprueba GAIA-X respecto a los Trust Anchors?
 
 Cuando el **Gaia-X Compliance Service** verifica unos datos:
 
@@ -42,11 +42,11 @@ Cuando el **Gaia-X Compliance Service** verifica unos datos:
 3. Que esa información es consistente
 4. Que la clave de firma del participante está asociada a un **Trust Anchor**
 
-# Referencia
+## Referencia
 
 > “To be compliant… keypairs used to sign claims must have at least one of the Trust Anchors in their certificate chain.”
 
-# Tipos de Trust Anchors reconocidos por GAIA-X
+## Tipos de Trust Anchors reconocidos por GAIA-X
 
 ### **1. State (TSP estatales)**
 
@@ -66,7 +66,7 @@ Aceptados temporalmente como Trust Service Providers (TSP)
 En la fase piloto, **GAIA-X Association** actúa como Trust Anchor en:
 [https://notary.gaia-x.eu](https://notary.gaia-x.eu)
 
-# ¿Cómo funciona un Trust Anchor en la práctica?
+## ¿Cómo funciona un Trust Anchor en la práctica?
 
 ### Caso 1 — Si una entidad reclama un atributo
 
@@ -85,7 +85,7 @@ El Trust Anchor:
 5. El participante lo almacena en su wallet
 6. Ese VC es usado como **prueba verificable** en GAIA-X
 
-# Caso 2 — Durante la verificación GAIA-X
+## Caso 2 — Durante la verificación GAIA-X
 
 Cuando un participante necesita demostrar que su información es legítima:
 
@@ -101,7 +101,7 @@ Si todo es correcto, GAIA-X emite un:
 
 → **Gaia-X Compliance VC**
 
-# Referencia
+## Referencia
 
 Sección “4.5 Compliance verification”
 
@@ -121,7 +121,7 @@ Es:
 Por ejemplo:
 
 ```
-"gx:dataUsageAgreementTrustAnchor": "https://notary.gaia-x.eu"
+"gx:dataUsageAgreementTrustAnchor": "https://docs.gaia-x.eu/policy-rules-committee/compliance-document/24.11/Gaia-X_Trust_Anchors/"
 ```
 
 O una política legal firmada y publicada por un Trust Anchor.
